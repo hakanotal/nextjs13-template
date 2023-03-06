@@ -13,6 +13,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 COPY app/ ./app/
 COPY public/ ./public/
 COPY components/ ./components/
+COPY styles/ ./styles/
 COPY .eslintrc.json           \
      .gitignore               \
      next-env.d.ts            \
