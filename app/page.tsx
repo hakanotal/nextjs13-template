@@ -1,9 +1,9 @@
-import { HeaderComponent } from '@/components/Header';
-import { FooterComponent } from '@/components/Footer';
-import { HeroComponent } from '@/components/Hero';
-import { FeaturesComponent } from '@/components/Features';
-import { ContactUs } from '@/components/ContactUs';
-import { FAQ } from '@/components/FAQ';
+import { HeaderComponent } from "@/components/Header";
+import { HeroComponent } from "@/components/Hero";
+import { FeaturesComponent } from "@/components/Features";
+import { FAQComponent } from "@/components/FAQ";
+import { ContactComponent } from "@/components/Contact";
+import { FooterComponent } from "@/components/Footer";
 
 export default function App() {
   return (
@@ -11,8 +11,8 @@ export default function App() {
       <HeaderComponent />
       <HeroComponent />
       <FeaturesComponent />
-      <FAQ />
-      <ContactUs />
+      <FAQComponent />
+      <ContactComponent />
       <FooterComponent />
     </>
   );

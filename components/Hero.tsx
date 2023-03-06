@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import {
   createStyles,
   Container,
@@ -6,31 +7,31 @@ import {
   Text,
   Button,
   rem,
-} from '@mantine/core';
+} from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: '#11284b',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundColor: "#11284b",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     backgroundImage:
-      'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80)',
+      "linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/images/hero.avif)",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
   },
 
   inner: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
 
-    [theme.fn.smallerThan('md')]: {
-      flexDirection: 'column',
+    [theme.fn.smallerThan("md")]: {
+      flexDirection: "column",
     },
   },
 
   image: {
-    [theme.fn.smallerThan('md')]: {
-      display: 'none',
+    [theme.fn.smallerThan("md")]: {
+      display: "none",
     },
   },
 
@@ -39,7 +40,7 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: `calc(${theme.spacing.xl} * 2)`,
     marginRight: `calc(${theme.spacing.xl} * 3)`,
 
-    [theme.fn.smallerThan('md')]: {
+    [theme.fn.smallerThan("md")]: {
       marginRight: 0,
     },
   },
@@ -52,8 +53,8 @@ const useStyles = createStyles((theme) => ({
     maxWidth: rem(500),
     fontSize: rem(48),
 
-    [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%',
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%",
       fontSize: rem(34),
       lineHeight: 1.15,
     },
@@ -64,8 +65,8 @@ const useStyles = createStyles((theme) => ({
     opacity: 0.75,
     maxWidth: rem(500),
 
-    [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%',
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%",
     },
   },
 
@@ -75,8 +76,8 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: rem(22),
 
-    [theme.fn.smallerThan('md')]: {
-      width: '100%',
+    [theme.fn.smallerThan("md")]: {
+      width: "100%",
     },
   },
 }));
@@ -89,15 +90,15 @@ export function HeroComponent() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              A{' '}
+              A{" "}
               <Text
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'pink', to: 'yellow' }}
+                gradient={{ from: "pink", to: "yellow" }}
               >
                 fully featured
-              </Text>{' '}
+              </Text>{" "}
               React components library
             </Title>
 
@@ -109,7 +110,7 @@ export function HeroComponent() {
 
             <Button
               variant="gradient"
-              gradient={{ from: 'pink', to: 'yellow' }}
+              gradient={{ from: "pink", to: "yellow" }}
               size="xl"
               className={classes.control}
               mt={40}

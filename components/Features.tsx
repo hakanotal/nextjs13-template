@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   ThemeIcon,
@@ -8,45 +8,45 @@ import {
   SimpleGrid,
   createStyles,
   rem,
-} from '@mantine/core';
+} from "@mantine/core";
 import {
   IconGauge,
   IconCookie,
   IconUser,
   IconMessage2,
   IconLock,
-} from '@tabler/icons-react';
+} from "@tabler/icons-react";
 
-export const MOCKDATA = [
+export const data = [
   {
     icon: IconGauge,
-    title: 'Extreme performance',
+    title: "Extreme performance",
     description:
-      'This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit',
+      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
   },
   {
     icon: IconUser,
-    title: 'Privacy focused',
+    title: "Privacy focused",
     description:
-      'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
+      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
   },
   {
     icon: IconCookie,
-    title: 'No third parties',
+    title: "No third parties",
     description:
-      'They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves',
+      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
   },
   {
     icon: IconLock,
-    title: 'Secure by default',
+    title: "Secure by default",
     description:
-      'Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right',
+      "Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right",
   },
   {
     icon: IconMessage2,
-    title: '24/7 Support',
+    title: "24/7 Support",
     description:
-      'Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail',
+      "Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail",
   },
 ];
 
@@ -82,26 +82,26 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 900,
     marginBottom: theme.spacing.md,
-    textAlign: 'center',
+    textAlign: "center",
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       fontSize: rem(28),
-      textAlign: 'left',
+      textAlign: "left",
     },
   },
 
   description: {
-    textAlign: 'center',
+    textAlign: "center",
 
-    [theme.fn.smallerThan('sm')]: {
-      textAlign: 'left',
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "left",
     },
   },
 }));
 
 export function FeaturesComponent() {
   const { classes } = useStyles();
-  const features = MOCKDATA.map((feature, index) => (
+  const features = data.map((feature, index) => (
     <Feature {...feature} key={index} />
   ));
 
@@ -123,8 +123,8 @@ export function FeaturesComponent() {
         cols={3}
         spacing={50}
         breakpoints={[
-          { maxWidth: 980, cols: 2, spacing: 'xl' },
-          { maxWidth: 755, cols: 1, spacing: 'xl' },
+          { maxWidth: 980, cols: 2, spacing: "xl" },
+          { maxWidth: 755, cols: 1, spacing: "xl" },
         ]}
       >
         {features}
