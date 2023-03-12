@@ -11,6 +11,7 @@ import {
 
 const useStyles = createStyles((theme) => ({
   root: {
+    height: `calc(100vh - ${rem(80)})`,
     backgroundColor: "#11284b",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -18,6 +19,11 @@ const useStyles = createStyles((theme) => ({
       "linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/images/hero.avif)",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+
+    [theme.fn.smallerThan("sm")]: {
+      backgroundImage: "none",
+      height: "auto",
+    },
   },
 
   inner: {

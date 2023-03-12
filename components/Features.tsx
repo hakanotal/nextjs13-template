@@ -58,14 +58,14 @@ interface FeatureProps {
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
-    <div>
+    <div className="text-center">
       <ThemeIcon variant="light" size={40} radius={40}>
-        <Icon size="1.1rem" stroke={1.5} />
+        <Icon size={24} stroke={1.5} />
       </ThemeIcon>
       <Text mt="sm" mb={7}>
         {title}
       </Text>
-      <Text size="sm" color="dimmed" sx={{ lineHeight: 1.6 }}>
+      <Text size="sm" color="dimmed" sx={{ lineHeight: 1.6 }} align="left">
         {description}
       </Text>
     </div>

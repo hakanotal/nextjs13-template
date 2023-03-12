@@ -4,6 +4,7 @@ import { FeaturesComponent } from "@/components/Features";
 import { FAQComponent } from "@/components/FAQ";
 import { ContactComponent } from "@/components/Contact";
 import { FooterComponent } from "@/components/Footer";
+import "@/styles/globals.css";
 
 export default function App() {
   return (

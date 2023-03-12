@@ -48,6 +48,7 @@ export function FAQComponent() {
               width={500}
               height={300}
               alt="Frequently Asked Questions"
+              className="max-sm:hidden"
             />
           </Col>
           <Col span={12} md={6}>

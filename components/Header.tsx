@@ -9,6 +9,8 @@ import {
   Burger,
   Container,
   rem,
+  Drawer,
+  Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -164,22 +166,39 @@ export function HeaderComponent() {
   });
 
   return (
+    <>
     <Header height={80}>
       <Container>
         <div className={classes.inner}>
-          <Banner/>
+          <Group>
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              className={classes.burger}
+              size="md"
+            />
+            <Banner />
+          </Group>
           <Group spacing={5} className={classes.links}>
             {items}
             <LangPicker />
           </Group>
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-          />
         </div>
       </Container>
     </Header>
+    <Drawer
+        opened={opened}
+        onClose={toggle}
+        position="left"
+        closeButtonProps={{
+          size: "lg",
+        }}
+      >
+        <Stack spacing={8} className="items-center py-6">
+          {items}
+          <LangPicker />
+        </Stack>
+      </Drawer>
+    </>
   );
 }
