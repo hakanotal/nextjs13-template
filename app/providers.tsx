@@ -1,9 +1,12 @@
 "use client";
+
+import "@/styles/globals.css";
 import { CacheProvider } from "@emotion/react";
 import { useEmotionCache, MantineProvider } from "@mantine/core";
+import { SessionProvider } from "next-auth/react";
 import { useServerInsertedHTML } from "next/navigation";
 
-export default function RootStyleRegistry({
+export default function RootProviders({
   children,
 }: {
   children: React.ReactNode;
@@ -22,8 +25,15 @@ export default function RootStyleRegistry({
 
   return (
     <CacheProvider value={cache}>
-      <MantineProvider withGlobalStyles withNormalizeCSS>
-        {children}
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{
+          colorScheme: "light",
+          primaryColor: "violet",
+        }}
+      >
+        <SessionProvider>{children}</SessionProvider>
       </MantineProvider>
     </CacheProvider>
   );

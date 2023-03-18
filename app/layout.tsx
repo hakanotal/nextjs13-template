@@ -1,4 +1,4 @@
-import RootStyleRegistry from "./emotion";
+import RootProviders from "./providers";
 
 export default function RootLayout({
   children,
@@ -10,12 +10,12 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Next.js 13 Template" />
-        <title>Next.js 13 Template</title>
+        <meta name="description" content="Next.js 13" />
+        <title>Next.js 13</title>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <RootStyleRegistry>{children}</RootStyleRegistry>
+        <RootProviders>{children}</RootProviders>
       </body>
     </html>
   );

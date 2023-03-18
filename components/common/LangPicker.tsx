@@ -12,7 +12,6 @@ const data = [
 
 const useStyles = createStyles((theme, { opened }: { opened: boolean }) => ({
   control: {
-    width: rem(150),
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -58,7 +57,7 @@ export function LangPicker() {
       onOpen={() => setOpened(true)}
       onClose={() => setOpened(false)}
       radius="md"
-      width="target"
+      width="default"
       withinPortal
     >
       <Menu.Target>
@@ -70,7 +69,6 @@ export function LangPicker() {
               height={22}
               alt={selected.label}
             />
-            <span className={classes.label}>{selected.label}</span>
           </Group>
           <IconChevronDown size="1rem" className={classes.icon} stroke={1.5} />
         </UnstyledButton>
@@ -84,7 +82,7 @@ export function LangPicker() {
               setOpened(false);
             }}
           >
-            <Group spacing="xs">
+            <Group spacing="xs" w={rem(120)}>
               <Image src={item.image} width={22} height={22} alt={item.label} />
               <span className={classes.label}>{item.label}</span>
             </Group>

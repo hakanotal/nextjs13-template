@@ -1,10 +1,7 @@
-import { HeaderComponent } from "@/components/Header";
-import { HeroComponent } from "@/components/Hero";
-import { FeaturesComponent } from "@/components/Features";
-import { FAQComponent } from "@/components/FAQ";
-import { ContactComponent } from "@/components/Contact";
-import { FooterComponent } from "@/components/Footer";
-import "@/styles/globals.css";
+import { HeaderComponent } from "@/components/common/Header";
+import { HeroComponent } from "@/components/common/Hero";
+import { FeaturesComponent } from "@/components/common/Features";
+import { FooterComponent } from "@/components/common/Footer";
 
 export default function App() {
   return (
@@ -12,8 +9,6 @@ export default function App() {
       <HeaderComponent />
       <HeroComponent />
       <FeaturesComponent />
-      <FAQComponent />
-      <ContactComponent />
       <FooterComponent />
     </>
   );

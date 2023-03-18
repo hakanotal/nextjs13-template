@@ -13,7 +13,7 @@ import {
   IconBrandYoutube,
   IconBrandInstagram,
 } from "@tabler/icons-react";
-import { MantineLogo } from "@mantine/ds";
+import { Banner } from "./Banner";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -210,7 +210,7 @@ export function FooterComponent() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <MantineLogo size={30} />
+          <Banner />
           <Text size="xs" color="dimmed" className={classes.description}>
             Build fully functional accessible web applications faster than ever
           </Text>
