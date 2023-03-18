@@ -30,7 +30,7 @@ export default function RootProviders({
         withNormalizeCSS
         theme={{
           colorScheme: "light",
-          primaryColor: "violet",
+          primaryColor: "cyan",
         }}
       >
         <SessionProvider>{children}</SessionProvider>

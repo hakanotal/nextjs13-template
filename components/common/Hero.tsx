@@ -1,130 +1,114 @@
 "use client";
-
 import {
   createStyles,
   Container,
-  Title,
   Text,
   Button,
+  Group,
   rem,
 } from "@mantine/core";
+import { GithubIcon } from "@mantine/ds";
 
 const useStyles = createStyles((theme) => ({
-  root: {
-    height: `calc(100vh - ${rem(80)})`,
-    backgroundColor: "#11284b",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundImage:
-      "linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/images/hero.avif)",
-    paddingTop: `calc(${theme.spacing.xl} * 3)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
-
-    [theme.fn.smallerThan("sm")]: {
-      backgroundImage: "none",
-      height: "auto",
-    },
+  wrapper: {
+    position: "relative",
+    boxSizing: "border-box",
+    backgroundColor:
+      theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
   },
 
   inner: {
-    display: "flex",
-    justifyContent: "space-between",
+    position: "relative",
+    paddingTop: rem(120),
+    paddingBottom: rem(120),
 
-    [theme.fn.smallerThan("md")]: {
-      flexDirection: "column",
-    },
-  },
-
-  image: {
-    [theme.fn.smallerThan("md")]: {
-      display: "none",
-    },
-  },
-
-  content: {
-    paddingTop: `calc(${theme.spacing.xl} * 2)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
-    marginRight: `calc(${theme.spacing.xl} * 3)`,
-
-    [theme.fn.smallerThan("md")]: {
-      marginRight: 0,
+    [theme.fn.smallerThan("sm")]: {
+      paddingBottom: rem(80),
+      paddingTop: rem(80),
     },
   },
 
   title: {
-    color: theme.white,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: rem(62),
     fontWeight: 900,
-    lineHeight: 1.05,
-    maxWidth: rem(500),
-    fontSize: rem(48),
+    lineHeight: 1.1,
+    margin: 0,
+    padding: 0,
+    color: theme.colorScheme === "dark" ? theme.white : theme.black,
 
-    [theme.fn.smallerThan("md")]: {
-      maxWidth: "100%",
-      fontSize: rem(34),
-      lineHeight: 1.15,
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: rem(42),
+      lineHeight: 1.2,
     },
   },
 
   description: {
-    color: theme.white,
-    opacity: 0.75,
-    maxWidth: rem(500),
+    marginTop: theme.spacing.xl,
+    fontSize: rem(24),
 
-    [theme.fn.smallerThan("md")]: {
-      maxWidth: "100%",
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: rem(18),
+    },
+  },
+
+  controls: {
+    marginTop: `calc(${theme.spacing.xl} * 2)`,
+
+    [theme.fn.smallerThan("sm")]: {
+      marginTop: theme.spacing.xl,
     },
   },
 
   control: {
-    paddingLeft: rem(50),
-    paddingRight: rem(50),
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: rem(22),
+    height: rem(54),
+    paddingLeft: rem(38),
+    paddingRight: rem(38),
 
-    [theme.fn.smallerThan("md")]: {
-      width: "100%",
+    [theme.fn.smallerThan("sm")]: {
+      height: rem(54),
+      paddingLeft: rem(18),
+      paddingRight: rem(18),
+      flex: 1,
     },
   },
 }));
 
 export function HeroComponent() {
   const { classes } = useStyles();
+
   return (
-    <div className={classes.root}>
-      <Container size="lg">
-        <div className={classes.inner}>
-          <div className={classes.content}>
-            <Title className={classes.title}>
-              A{" "}
-              <Text
-                component="span"
-                inherit
-                variant="gradient"
-                gradient={{ from: "pink", to: "yellow" }}
-              >
-                fully featured
-              </Text>{" "}
-              React components library
-            </Title>
+    <div className={classes.wrapper}>
+      <Container size={700} className={classes.inner}>
+        <h1 className={classes.title}>
+          A{" "}
+          <Text
+            component="span"
+            variant="gradient"
+            gradient={{ from: "blue", to: "cyan" }}
+            inherit
+          >
+            fully featured
+          </Text>{" "}
+          React components and hooks library
+        </h1>
 
-            <Text className={classes.description} mt={30}>
-              Build fully functional accessible web applications with ease –
-              Mantine includes more than 100 customizable components and hooks
-              to cover you in any situation
-            </Text>
+        <Text className={classes.description} color="dimmed">
+          Build fully functional accessible web applications with ease – Mantine
+          includes more than 100 customizable components and hooks to cover you
+          in any situation
+        </Text>
 
-            <Button
-              variant="gradient"
-              gradient={{ from: "pink", to: "yellow" }}
-              size="xl"
-              className={classes.control}
-              mt={40}
-            >
-              Get started
-            </Button>
-          </div>
-        </div>
+        <Group className={classes.controls}>
+          <Button
+            size="xl"
+            className={classes.control}
+            variant="gradient"
+            gradient={{ from: "blue", to: "cyan" }}
+          >
+            Get started
+          </Button>
+        </Group>
       </Container>
     </div>
   );

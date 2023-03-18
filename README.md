@@ -27,3 +27,11 @@ $ docker build -t web-ui .
 $ docker run -p 3000:3000 --name web-ui web-ui
 
 ```
+
+## Tech Stack
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [MantineUI](https://mantine.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
