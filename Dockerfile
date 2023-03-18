@@ -11,8 +11,10 @@ WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED 1
 
 COPY app/ ./app/
-COPY public/ ./public/
 COPY components/ ./components/
+COPY lib/ ./lib/
+COPY pages/ ./pages/
+COPY public/ ./public/
 COPY styles/ ./styles/
 COPY .eslintrc.json           \
      .gitignore               \

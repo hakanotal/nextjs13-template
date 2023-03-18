@@ -23,6 +23,9 @@
       "@/components/*": [
         "components/*"
       ],
+      "@/lib/*":[
+        "lib/*"
+      ],
       "@/styles/*": [
         "styles/*"
       ]
@@ -38,7 +41,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "/Users/hakan/Desktop/redhilldns-web-ui/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
